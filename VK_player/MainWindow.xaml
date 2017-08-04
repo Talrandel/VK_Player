@@ -1,0 +1,33 @@
+﻿<Window x:Class="VK_player.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:cm="clr-namespace:System.ComponentModel;assembly=System"
+        Title="VK audio player by Talrasha" Height="592.477" Width="664.341" Loaded="Window_Loaded">
+    <Window.Resources>
+        <cm:BackgroundWorker x:Key="backgroundWorker" WorkerReportsProgress="True" WorkerSupportsCancellation="True" DoWork="BackgroundWorker_DoWork"/>
+    </Window.Resources>
+    <Grid Margin="0,0,2,0">
+        <ListBox Name="ListBoxTracks" HorizontalAlignment="Left" Height="421" VerticalAlignment="Top" Width="654" MouseDoubleClick="ListBoxTracks_MouseDoubleClick"/>
+        <Slider Name="SliderVolumePosition" ValueChanged="SliderVolumePosition_ValueChanged" HorizontalAlignment="Left" Margin="361,478,0,0" VerticalAlignment="Top" Width="100"/>
+        <Slider Name="SliderAudioPosition" ValueChanged="SliderAudioPosition_ValueChanged" HorizontalAlignment="Left" Margin="10,426,0,0" VerticalAlignment="Top" Width="634"/>
+        <Button Name="ButtonPlay" HorizontalAlignment="Left" Margin="110,463,0,0" VerticalAlignment="Top" Width="48" Click="Play_Click">
+            <Image Source="D:\Programs\VK_player\VK_player\icon_play.png"/>
+        </Button>
+        <Button Name="ButtonStop" HorizontalAlignment="Left" Margin="57,463,0,0" VerticalAlignment="Top" Width="48" Click="Stop_Click">
+            <Image Source="D:\Programs\VK_player\VK_player\icon_stop.png"/>
+        </Button>
+        <Button Name="ButtonNext" HorizontalAlignment="Left" Margin="163,463,0,0" VerticalAlignment="Top" Width="48" Click="Next_Click">
+            <Image Source="D:\Programs\VK_player\VK_player\icon_next.png"/>
+        </Button>
+        <Button Name="ButtonPrevious" HorizontalAlignment="Left" Margin="4,463,0,0" VerticalAlignment="Top" Width="48" Click="Previous_Click">
+            <Image Source="D:\Programs\VK_player\VK_player\icon_previous.png"/>
+        </Button>
+        <Button Name="ButtonVolume" HorizontalAlignment="Left" Margin="308,463,0,0" VerticalAlignment="Top" Width="48" Click="Volume_Click">
+            <Image Source="D:\Programs\VK_player\VK_player\icon_volume_on.png"/>
+        </Button>
+        <Button Name="ButtonLoop" HorizontalAlignment="Left" Margin="235,463,0,0" VerticalAlignment="Top" Width="48" Click="Loop_Click">
+            <Image Source="D:\Programs\VK_player\VK_player\icon_loop_off.png"/>
+        </Button>
+        <Label Name="LabelTime" HorizontalAlignment="Left" Margin="473,449,0,0" VerticalAlignment="Top" Width="171" FontFamily="Times New Roman" FontSize="14" HorizontalContentAlignment="Right"/>
+    </Grid>
+</Window>

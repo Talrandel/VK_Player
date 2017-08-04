@@ -1,0 +1,11 @@
+﻿<Window x:Class="VK_player.LoadVK"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="LoadVK" Height="505" Width="500" Loaded="Window_Loaded">
+    <Grid>
+        <WebBrowser Name="WebBrowser" HorizontalAlignment="Left" Height="435" VerticalAlignment="Top" Width="492" Navigating="WebBrowser_Navigating" LoadCompleted="WebBrowser_LoadCompleted"/>
+        <ToolBarTray Name="ToolBarTray" HorizontalAlignment="Left" Height="34" Margin="0,435,0,0" VerticalAlignment="Top" Width="492"/>
+        <Label Name="LabelAuthInfo" Content="" HorizontalAlignment="Left" Margin="10,440,0,0" VerticalAlignment="Top"/>
+
+    </Grid>
+</Window>
